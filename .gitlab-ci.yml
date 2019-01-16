@@ -1,7 +1,5 @@
-image: jamesdbloom/docker-java8-maven
+image: maven:latest
 
 build_image:
   script:
-    - mvn clean package
-    - docker build -t pring-boot-service-eureka-server .
-    - docker push registry.gitlab.com/pqab-ms/service-eureka-server
+    - mvn clean package docker:build -DpushImage
