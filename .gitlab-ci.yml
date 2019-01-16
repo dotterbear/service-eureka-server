@@ -1,5 +1,8 @@
 image: docker:latest
 
+before_script:
+  - apt-get install maven
+
 build_image:
   script:
     - mvn clean package
