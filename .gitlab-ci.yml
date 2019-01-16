@@ -1,0 +1,11 @@
+image: docker:latest
+
+before_script:
+  - docker login registry.gitlab.com
+  - docker info
+
+build_image:
+  script:
+    - mvn clean package
+    - docker build -t pring-boot-service-eureka-server .
+    - docker push registry.gitlab.com/pqab-ms/service-eureka-server
