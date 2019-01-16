@@ -1,7 +1,6 @@
 image: docker:latest
 
 before_script:
-  - docker login registry.gitlab.com
   - docker info
 
 build_image:
