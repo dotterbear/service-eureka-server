@@ -1,5 +1,10 @@
-image: maven:latest
-
-build_image:
+build:jar:
+  image: maven:latest
   script:
-    - mvn clean package docker:build -DpushImage
+    - mvn clean package
+
+build:image:
+  image: docker:latest
+  script:
+    - docker build -t registry.gitlab.com/pqab-ms/service-eureka-server .
+    - docker push registry.gitlab.com/pqab-ms/service-eureka-server
