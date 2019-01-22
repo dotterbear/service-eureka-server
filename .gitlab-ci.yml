@@ -1,13 +1,15 @@
 stages:
-  - build_jar
-  - build_image
+  - jar
+  - image
 
 build_jar:
+  stage: jar
   image: maven:latest
   script:
     - mvn clean package
 
 build_image:
+  stage: image
   image: docker:latest
   script:
     - docker build -t registry.gitlab.com/pqab-ms/service-eureka-server .
