@@ -11,8 +11,6 @@ build_jar:
 build_image:
   stage: image
   image: docker:latest
-  services:
-    - docker:dind
   script:
     - docker build -t registry.gitlab.com/pqab-ms/service-eureka-server .
     - docker push registry.gitlab.com/pqab-ms/service-eureka-server
