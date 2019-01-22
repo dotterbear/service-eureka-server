@@ -62,11 +62,11 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.12</version>
 				<configuration>
-					<imageName>registry.gitlab.com/pqab-ms/service-eureka-server</imageName>
-					<dockerDirectory>/</dockerDirectory>
+					<imageName>registry.gitlab.com/pqab-ms/${project.build.finalName}</imageName>
+					<dockerDirectory>${project.basedir}</dockerDirectory>
 					<resources>
 						<resource>
-							<targetPath>/</targetPath>
+							<targetPath></targetPath>
 							<directory>${project.build.directory}</directory>
 							<include>${project.build.finalName}.jar</include>
 						</resource>
