@@ -19,5 +19,6 @@ build_image:
   before_script:
     - docker info
   script:
+    - ls -la
     - docker build -t registry.gitlab.com/pqab-ms/service-eureka-server .
     - docker push registry.gitlab.com/pqab-ms/service-eureka-server
