@@ -1,6 +1,5 @@
 FROM openjdk:8-jdk-alpine
 # VOLUME /tmp
-ls -la
 ADD target/service-eureka-server-1.0.0-SNAPSHOT.jar app.jar
 EXPOSE 8761
 ENV JAVA_OPTS=""
