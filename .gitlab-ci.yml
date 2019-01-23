@@ -17,7 +17,7 @@ build_image:
     DOCKER_HOST: tcp://docker:2375/
     DOCKER_DRIVER: overlay2
   dependencies:
-    - jar
+    - build_jar
   services:
     - docker:dind
   before_script:
