@@ -1,6 +1,7 @@
 stages:
   - jar
   - image
+  - aws_image
 
 build_jar:
   stage: jar
@@ -26,3 +27,20 @@ build_image:
   script:
     - docker build -t $CI_REGISTRY$CI_REGISTRY_PATH .
     - docker push $CI_REGISTRY$CI_REGISTRY_PATH
+
+build_aws_image:
+  stage: aws_image
+  image: docker:stable
+  variables:
+    DOCKER_HOST: tcp://docker:2375/
+    DOCKER_DRIVER: overlay2
+  dependencies:
+    - build_jar
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u $AWS_DEPLOY_USER -p $AWS_DEPLOY_PASSWORD $AWS_REGISTRY
+    - docker info
+  script:
+    - docker build -t $AWS_REGISTRY$AWS_REGISTRY_PATH .
+    - docker push $AWS_REGISTRY$AWS_REGISTRY_PATH
