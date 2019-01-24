@@ -26,3 +26,5 @@ build_image:
   script:
     - docker build -t $CI_REGISTRY$CI_REGISTRY_PATH .
     - docker push $CI_REGISTRY$CI_REGISTRY_PATH
+    - docker build -t $AWS_REPOSITORY_URL .
+    - docker push $AWS_REPOSITORY_URL
