@@ -41,6 +41,7 @@ build_aws_image:
   before_script:
     - apk add --no-cache curl jq python py-pip
     - pip install awscli
+    - aws configure set aws_access_key_id $AWS_ACCESS_KEY
     - $(aws ecr get-login --no-include-email --region ap-southeast-2)
     - docker info
   script:
