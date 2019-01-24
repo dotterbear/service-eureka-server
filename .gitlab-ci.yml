@@ -39,7 +39,7 @@ build_aws_image:
   services:
     - docker:dind
   before_script:
-    - docker login -u $AWS_DEPLOY_USER -p $AWS_DEPLOY_PASSWORD $AWS_REGISTRY
+    - $(aws ecr get-login --no-include-email --region ap-southeast-2)
     - docker info
   script:
     - docker build -t $AWS_REGISTRY$AWS_REGISTRY_PATH .
