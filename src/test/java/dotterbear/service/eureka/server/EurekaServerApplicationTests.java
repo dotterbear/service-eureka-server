@@ -1,4 +1,4 @@
-package dotterbear.eureka.server;
+package dotterbear.service.eureka.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

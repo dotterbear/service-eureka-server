@@ -12,8 +12,8 @@
 	<groupId>dotterbear</groupId>
 	<artifactId>service-eureka-server</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>eureka-server</name>
-	<description>Eureka server</description>
+	<name>service-eureka-server</name>
+	<description>Service for eureka server</description>
 
 	<properties>
 		<java.version>1.8</java.version>
