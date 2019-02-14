@@ -1,5 +1,9 @@
 # service-eureka-server
 
+A spring cloud config server with docker image.
+
+For more details, please see [service-overview](https://github.com/dotterbear/service-overview).
+
 ### Development
 
 ##### Prerequisites
