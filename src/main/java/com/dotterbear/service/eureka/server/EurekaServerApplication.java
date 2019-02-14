@@ -1,4 +1,4 @@
-package dotterbear.service.eureka.server;
+package com.dotterbear.service.eureka.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

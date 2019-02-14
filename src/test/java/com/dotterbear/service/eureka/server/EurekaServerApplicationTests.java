@@ -1,4 +1,4 @@
-package dotterbear.service.eureka.server;
+package com.dotterbear.service.eureka.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,9 +9,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class EurekaServerApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
-
+  @Test
+  public void contextLoads() {}
 }
-

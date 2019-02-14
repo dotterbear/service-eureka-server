@@ -1,1 +1,0 @@
-Service Eureka Server
